@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pannkakor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!--
+      ## Pancake Recipe
+        This project uses Tailwind CSS to streamline development and learn its basics. 
+        Tailwind was chosen for its efficiency in achieving a pixel-perfect design based 
+        on the Figma file. As someone transitioning from design, this decision felt like 
+        a practical and rewarding step forward.
+
+      #Code Review
+        After our review session I gained some more inputs and knowledge.
+        After all, we aiming to write Semantic code, making it accessible for all of us.
+        To make the code undestandable, I use comments. Make sense for me and hopefully for you too.
+    -->
+  </head>
+  <!-- Tailwind: 'bg-hello' is not very intitinutive. Its value declared in tailwind.config.js. '/30' will sat the opacity to 30.
+       Tailwind class explanation:
+      - `xl:pb-16`: Adds padding to the bottom (`pb`) of the element when the viewport size is `xl` or larger (extra large screens, typically 1280px and up). 
+      - `16`: Refers to a spacing value defined in the Tailwind configuration (4rem or 64px by default).
+      This ensures responsive spacing optimized for larger screens.
+
+      Pure love.
+
+      If this was sharp I would propably inject some intelligence from Utopia.fyi. Thats the typographer in me talking.
+  -->
+  <body class="bg-hello/30 xl:pb-16">
+    <div class="max-w-screen-xl mx-auto bg-white overflow-hidden">
+      <main class="px-8 xl:px-16 py-16 grid gap-8">
+        <header>
+          <figure>
+            <img src="assets/images/pancakes-hero.png" class="w-full h-full object-cover min-h-[500px]" alt="Jättegoda pannkakor med jordgubbsylt oxh grädde" />
+          </figure>
+          <h1>Enkelt recept på pannkakor</h1>
+        </header>
+        <!-- Tailwind: We can define custom values within our classdefintion like 'classname[customvalue]'-->
+        <div class="bg-[#EBEBEB] p-6 list-none">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</div>
+        <section class="section ingredients">
+          <h2>
+            Ingredienser
+            <span class="font-normal">(4 port)</span>
+          </h2>
+          <!-- By using class 'list-outside' the text nicely wraps on multiple lines -->
+          <ul class="list-disc list-outside ml-7">
+            <li>2 1/2 dl vetemjöl</li>
+            <li>1/2 tsk salt</li>
+            <li>6 dl mjölk</li>
+            <li>3 ägg</li>
+            <li>smör (till stekning)</li>
+            <li>sylt, bär eller frukt till servering</li>
+          </ul>
+        </section>
+        <section class="how-to-do">
+          <h2>Så här gör du</h2>
+          <ul class="list-decimal list-outside ml-7">
+            <li class="">Blanda mjöl och salt i en bunke.</li>
+            <li class="">Vispa i hälften av mjölken och vispa till en slät smet.</li>
+            <li class="">Vispa i resten av mjölken och äggen.</li>
+            <li class="">Låt smeten vila ca 10 minuter.</li>
+            <li class="">Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek- eller pannkakspanna.</li>
+            <li class="">Servera med sylt, bär eller frukt.</li>
+          </ul>
+        </section>
+        <!-- Disscussion around section/aside -->
+        <aside class="suggestions">
+          <h2>Serveringsförslag</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <img src="assets/images/pancakes-cover.png" class="w-full h-full object-cover min-h-[467px]" alt="Pannkakor upplagda på tallrik" />
+            <img src="assets/images/pancakes-top.png" class="w-full h-full object-cover min-h-[467px]" alt="Pannkakor med apelsin" />
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

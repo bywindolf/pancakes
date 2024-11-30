@@ -1,0 +1,21 @@
+@import 'base.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply text-[24px] font-sans;
+  }
+
+  h1 {
+    @apply text-hello mb-0 text-[40px] leading-snug font-bold;
+  }
+  h2 {
+    @apply text-2xl mt-0 mb-4 text-[32px] leading-snug  font-bold;
+  }
+  .section {
+    @apply grid gap-[11px] lg:gap-[14px];
+  }
+  .suggestions {
+    @apply gap-[20px];
+  }
+}
