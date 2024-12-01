@@ -7,10 +7,10 @@
   }
 
   h1 {
-    @apply text-hello mb-0 text-[40px] leading-snug font-bold;
+    @apply mb-0 text-[40px] leading-snug font-bold;
   }
   h2 {
-    @apply text-2xl mt-0 mb-4 text-[32px] leading-snug  font-bold;
+    @apply text-2xl mt-0 mb-2 text-[32px] leading-snug font-bold;
   }
   .section {
     @apply grid gap-[11px] lg:gap-[14px];
@@ -18,4 +18,12 @@
   .suggestions {
     @apply gap-[20px];
   }
+}
+.btn-wrapper {
+  @apply fixed bottom-0 p-6 z-10 flex justify-end w-full backdrop-blur-lg;
+}
+#toggleOverlayBtn {
+  @apply bg-black text-white rounded-full px-3 py-1 text-sm tracking-wide;
+}
+#toggleOverlayBtn:hover {
 }

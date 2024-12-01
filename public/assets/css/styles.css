@@ -566,13 +566,11 @@ h1{
   font-size: 40px;
   font-weight: 700;
   line-height: 1.375;
-  --tw-text-opacity: 1;
-  color: rgb(161 0 0 / var(--tw-text-opacity));
 }
 
 h2{
   margin-top: 0px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-size: 32px;
@@ -595,6 +593,26 @@ h2{
   gap: 20px;
 }
 
+.fixed{
+  position: fixed;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.bottom-0{
+  bottom: 0px;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.z-10{
+  z-index: 10;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -602,6 +620,10 @@ h2{
 
 .mb-0{
   margin-bottom: 0px;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
 }
 
 .mb-4{
@@ -616,12 +638,24 @@ h2{
   margin-top: 0px;
 }
 
+.flex{
+  display: flex;
+}
+
 .grid{
   display: grid;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-full{
   height: 100%;
+}
+
+.h-\[1983px\]{
+  height: 1983px;
 }
 
 .min-h-\[467px\]{
@@ -660,6 +694,10 @@ h2{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.justify-end{
+  justify-content: flex-end;
+}
+
 .gap-6{
   gap: 1.5rem;
 }
@@ -680,23 +718,43 @@ h2{
   overflow: hidden;
 }
 
+.rounded-full{
+  border-radius: 9999px;
+}
+
 .bg-\[\#EBEBEB\]{
   --tw-bg-opacity: 1;
   background-color: rgb(235 235 235 / var(--tw-bg-opacity));
 }
 
-.bg-hello{
+.bg-black{
   --tw-bg-opacity: 1;
-  background-color: rgb(161 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-hello\/30{
+.bg-primary\/30{
   background-color: rgb(161 0 0 / 0.3);
 }
 
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'\/designs\/figma-design\.png\'\)\]{
+  background-image: url('/designs/figma-design.png');
+}
+
+.bg-\[length\:1900px_1983px\]{
+  background-size: 1900px 1983px;
+}
+
+.bg-top{
+  background-position: top;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
 }
 
 .object-cover{
@@ -708,9 +766,19 @@ h2{
   padding: 1.5rem;
 }
 
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-16{
@@ -735,17 +803,79 @@ h2{
   font-size: 40px;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-normal{
   font-weight: 400;
+}
+
+.leading-\[1\.33\]{
+  line-height: 1.33;
 }
 
 .leading-snug{
   line-height: 1.375;
 }
 
-.text-hello{
+.text-white{
   --tw-text-opacity: 1;
-  color: rgb(161 0 0 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+.opacity-100{
+  opacity: 1;
+}
+
+.mix-blend-darken{
+  mix-blend-mode: darken;
+}
+
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-wrapper{
+  position: fixed;
+  bottom: 0px;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  --tw-backdrop-blur: blur(16px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+#toggleOverlayBtn{
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#toggleOverlayBtn:hover {
 }
 
 @media (min-width: 768px){

@@ -10,8 +10,7 @@ module.exports = {
             sans: ['Open Sans', 'sans-serif'],
     },
      colors: {
-      'hello': "#A10000", // custom red color
-      'primary': "#3490dc", // example of another custom color
+      'primary': "#A10000", // example of another custom color
       'secondary': "#ffed4a", // example of a yellow color
       'neutral': "#f1f1f1", // another example (light gray)
       'white': '#ffffff', // this is still here from Tailwind default

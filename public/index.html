@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Pannkakor</title>
+    <title>Pannkakor | Ett recept</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <!--
@@ -27,24 +27,28 @@
 
       If this was sharp I would propably inject some intelligence from Utopia.fyi. Thats the typographer in me talking.
   -->
-  <body class="bg-hello/30 xl:pb-16">
-    <div class="max-w-screen-xl mx-auto bg-white overflow-hidden">
-      <main class="px-8 xl:px-16 py-16 grid gap-8">
-        <header>
-          <figure>
-            <img src="assets/images/pancakes-hero.png" class="w-full h-full object-cover min-h-[500px]" alt="Jättegoda pannkakor med jordgubbsylt oxh grädde" />
-          </figure>
-          <h1>Enkelt recept på pannkakor</h1>
-        </header>
-        <!-- Tailwind: We can define custom values within our classdefintion like 'classname[customvalue]'-->
+  <body class="bg-primary/30 xl:pb-16">
+    <div
+      id="design-overlay"
+      class="hidden absolute top-0 w-full h-[1983px] bg-[length:1900px_1983px] bg-no-repeat bg-top z-10 bg-[url('/designs/figma-design.png')] mix-blend-darken opacity-0 transition-opacity duration-1500 ease-in-out"
+    ></div>
+    <main class="max-w-screen-xl mx-auto bg-white overflow-hidden">
+      <header>
+        <figure>
+          <img src="assets/images/pancakes-hero.png" class="w-full h-full object-cover min-h-[500px]" alt="Jättegoda pannkakor med jordgubbsylt oxh grädde" />
+        </figure>
+      </header>
+      <!-- Tailwind: We can define custom values within our classdefintion like 'classname[customvalue]'-->
+      <div class="px-8 xl:px-16 py-16 grid gap-8">
+        <h1>Enkelt recept på pannkakor</h1>
         <div class="bg-[#EBEBEB] p-6 list-none">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</div>
-        <section class="section ingredients">
+        <section class="ingredients">
           <h2>
             Ingredienser
             <span class="font-normal">(4 port)</span>
           </h2>
           <!-- By using class 'list-outside' the text nicely wraps on multiple lines -->
-          <ul class="list-disc list-outside ml-7">
+          <ul class="list-disc list-outside ml-7 leading-[1.33]">
             <li>2 1/2 dl vetemjöl</li>
             <li>1/2 tsk salt</li>
             <li>6 dl mjölk</li>
@@ -55,7 +59,7 @@
         </section>
         <section class="how-to-do">
           <h2>Så här gör du</h2>
-          <ul class="list-decimal list-outside ml-7">
+          <ul class="list-decimal list-outside ml-7 leading-[1.33]">
             <li class="">Blanda mjöl och salt i en bunke.</li>
             <li class="">Vispa i hälften av mjölken och vispa till en slät smet.</li>
             <li class="">Vispa i resten av mjölken och äggen.</li>
@@ -66,13 +70,32 @@
         </section>
         <!-- Disscussion around section/aside -->
         <aside class="suggestions">
-          <h2>Serveringsförslag</h2>
+          <h2 class="mb-4">Serveringsförslag</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <img src="assets/images/pancakes-cover.png" class="w-full h-full object-cover min-h-[467px]" alt="Pannkakor upplagda på tallrik" />
             <img src="assets/images/pancakes-top.png" class="w-full h-full object-cover min-h-[467px]" alt="Pannkakor med apelsin" />
           </div>
         </aside>
-      </main>
+      </div>
+    </main>
+    <!-- A toggle button to hide/show Figma design. Just for play around with simple Javascript-->
+    <div class="btn-wrapper">
+      <button id="toggleOverlayBtn">Toggle Figma design</button>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Select the button and the overlay
+        const toggleOverlayBtn = document.getElementById('toggleOverlayBtn');
+        const overlay = document.getElementById('design-overlay');
+
+        // Add event listener to the button
+        toggleOverlayBtn.addEventListener('click', () => {
+          // Toggle the overlay visibility and opacity
+          overlay.classList.toggle('hidden'); // Toggle visibility
+          overlay.classList.toggle('opacity-0'); // Toggle opacity to trigger fade
+          overlay.classList.toggle('opacity-100'); // Fade in
+        });
+      });
+    </script>
   </body>
 </html>
