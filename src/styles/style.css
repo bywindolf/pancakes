@@ -5,7 +5,6 @@
   body {
     @apply text-[24px] font-sans;
   }
-
   h1 {
     @apply mb-0 text-[40px] leading-snug font-bold;
   }
@@ -20,7 +19,7 @@
   }
 }
 .btn-wrapper {
-  @apply fixed bottom-0 p-6 z-10 flex justify-end w-full backdrop-blur-lg;
+  @apply fixed top-0 right-0 p-6 z-10 hidden justify-end backdrop-blur-lg lg:flex;
 }
 #toggleOverlayBtn {
   @apply bg-black text-white rounded-full px-3 py-1 text-sm tracking-wide;
