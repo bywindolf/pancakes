@@ -1,6 +1,6 @@
 # Pancake recipe card
 
-A straightforward assignment, focusing solely on writing **HTML** and **CSS** . There was no need to make design decisions; the task was simply to base the code on an already provided design.
+A straightforward assignment, focusing solely on writing **HTML** and **CSS**. There was no need to make design decisions; the task was simply to base the code on an already provided design.
 
 I’ve already decided to make use of **Tailwind CSS** and learn the basics. In the past, during my career, delivering handcrafted PSDs to developers was almost never satisfying. I realized that achieving the right results without using some sort of framework, like Bootstrap (never going back), takes time — time I wanted to save for other learning priorities that specific week.
 
